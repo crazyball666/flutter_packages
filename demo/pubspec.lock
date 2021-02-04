@@ -138,9 +138,11 @@ packages:
   toast:
     dependency: "direct main"
     description:
-      path: "../toast"
-      relative: true
-    source: path
+      path: toast
+      ref: HEAD
+      resolved-ref: "72afdcf1a6c4502533d9c96b65cb0ed3e798ac3e"
+      url: "https://github.com/crazyball666/flutter_packages.git"
+    source: git
     version: "0.0.1"
   typed_data:
     dependency: transitive
