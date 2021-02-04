@@ -10,7 +10,7 @@ class ToastUtil {
     BuildContext context, {
     Icon icon,
     String text,
-    Color color = Colors.yellow,
+    Color color = Colors.black,
     TextStyle textStyle = const TextStyle(color: Colors.white, fontSize: 16),
     Duration toastDuration = const Duration(seconds: 2),
     Duration animateDuration = const Duration(milliseconds: 250),
