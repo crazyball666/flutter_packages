@@ -12,11 +12,14 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
+  install_plugin: ^2.0.1
   toast:
-    git:
-      url: https://github.com/crazyball666/flutter_packages.git
-      path: toast
-#    path: "../toast/"
+#    git:
+#      url: https://github.com/crazyball666/flutter_packages.git
+#      path: toast
+    path: "../toast/"
+  native_util:
+    path: "../native_util/"
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:install_plugin/install_plugin.dart';
+import 'package:native_util/native_util.dart';
 import 'package:toast/toast.dart';
+import 'dart:io';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,10 +19,28 @@ class _HomePageState<HomePage> extends State {
     ToastUtil.showToast(context, text: "222");
   }
 
+  ///native
+  _test() async {
+    try {
+      File demo = await NativeUtil.download(
+          "https://open.efun.com/sdkSecret/EfunAnalytesApp.apk",
+          downloadProgress: (current, total) {
+        print("$current/$total");
+      });
+
+      InstallPlugin.installApk(demo.path, "com.example.demo");
+    } catch (err) {
+      print("err");
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    _itemList = [Item(name: "toast", function: _showToast)];
+    _itemList = [
+      Item(name: "toast", function: _showToast),
+      Item(name: "native", function: _test),
+    ];
   }
 
   @override
